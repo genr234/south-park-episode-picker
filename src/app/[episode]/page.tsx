@@ -21,7 +21,15 @@ export default function Episode({
 }) {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState({
+    name: "Loading...",
+    thumbnail_url: "/placeholder.png",
+    season: "Loading...",
+    episode: "Loading...",
+    air_date: "Loading...",
+    description: "Loading...",
+    wiki_url: "/",
+  });
   const episode = use(params).episode;
 
   useEffect(() => {
